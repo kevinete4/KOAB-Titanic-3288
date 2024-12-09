@@ -8,4 +8,4 @@
 * **Model date**: December 9, 2024
 * **Model version**: 1.0
 * **License**: MIT
-* **Model implementation code**: [DNSC_6301_Example_Project.ipynb](https://github.com/jphall663/GWU_DNSC_6301_project/blob/main/DNSC_6301_Example_Project.ipynb)
+* **Model implementation code**: [DNSC3288 Titanic - Machine Learning from Distaster] (**titanic_3288.py**)
