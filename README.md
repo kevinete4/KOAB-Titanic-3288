@@ -21,16 +21,16 @@
 
 | Name | Modeling Role | Measurement Level| Description|
 | ---- | ------------- | ---------------- | ---------- |
-| **PassengerId** | input | int | ID for each passenger |
-|**Survived**| input | float | 0 = Did not survive, 1 = Did survive  |
-| **Pclass** | demographic information | int | Ticket Class: 1 = 1st, 2 = 2nd, 3 = 3rd |
+| **PassengerId** | identifier | int | ID for each passenger |
+|**Survived**| target | float | 0 = Did not survive, 1 = Did survive  |
+| **Pclass** | input | int | Ticket Class: 1 = 1st, 2 = 2nd, 3 = 3rd |
 | **Sex** | demographic information | object | male,female |
-| **Age** | demographic information | int | age in years |
+| **Age** | input | int | age in years |
 | **Name** | demographic information | object | Name of passenger |
-| **SibSp** | demographic information | int | 	# of siblings / spouses aboard the Titanic |
-| **Parch** | demographic information | int | 	# of parents / children aboard the Titanic |
+| **SibSp** | input | int | 	# of siblings / spouses aboard the Titanic |
+| **Parch** | input | int | 	# of parents / children aboard the Titanic |
 | **Ticket** | demographic information | object | Ticket number |
-| **Fare** | demographic information | float | Passenger fare |
+| **Fare** | input | float | Passenger fare |
 | **Cabin** | demographic information | object | Cabin number |
 | **Embarked** | demographic information | object | C = Cherbourg, Q = Queenstown, S = Southampton |
 
@@ -68,18 +68,12 @@ clf_ext = ExtraTreesClassifier(
 ```
 ### Quantitative Analysis
 
-* Models were assessed primarily with AUC and AIR. See details below:
+* Models were assessed with AUC. See details below:
 
 | Train AUC | Validation AUC | Test AUC |
 | ------ | ------- | -------- |
-| 0.871 | 0.870  | Need* |
+| 0.871 | 0.870  | 0.684* |
 
-| Group | Validation AIR |
-|-------|-----|
-| #1 | 0.8345 |
-| #2 | 0.8765 |
-| #3 | 1.098 |
-| #4 | 1.245 |
 
 #### Correlation Heatmap
 ![Correlation Heatmap](![image](https://github.com/user-attachments/assets/b50f3ba9-6f61-42ac-96ff-6efe3ce6d3d5)
