@@ -6,7 +6,7 @@
 
 * **Person or organization developing model**: Kevin Etesham, `kevinetesham4@gwmail.gwu.edu`; Liv Gao, `livgao26@gwmail.gwu.edu`; Acadia Grenier, `acadiagrenier@gwmail.gwu.edu`; Ben Eber, `ben.eber@gwmail.gwu.edu`
 * **Model date**: December 9, 2024
-* **Model version**: 1.0
+* **Model version**: 0.1.1
 * **License**: MIT
 * **Model implementation code**: [titanic_3288.ipynb](https://github.com/kevinete4/KOAB-Titanic-3288/blob/main/titanic_3288.py)
 
@@ -21,20 +21,20 @@
 
 | Name | Modeling Role | Measurement Level| Description|
 | ---- | ------------- | ---------------- | ---------- |
-| **PassengerId** | input | int | ID for each passenger |
-|**Survived**| input | float | 0 = Did not survive, 1 = Did survive  |
-| **Pclass** | demographic information | int | Ticket Class: 1 = 1st, 2 = 2nd, 3 = 3rd |
+| **PassengerId** | ID | int | ID for each passenger |
+|**Survived**| target | float | 0 = Did not survive, 1 = Did survive  |
+| **Pclass** | input | int | Ticket Class: 1 = 1st, 2 = 2nd, 3 = 3rd |
 | **Sex** | demographic information | object | male,female |
-| **Age** | demographic information | int | age in years |
+| **Age** | input | float | age in years |
 | **Name** | demographic information | object | Name of passenger |
-| **SibSp** | demographic information | int | 	# of siblings / spouses aboard the Titanic |
-| **Parch** | demographic information | int | 	# of parents / children aboard the Titanic |
+| **SibSp** | input | int | 	# of siblings / spouses aboard the Titanic |
+| **Parch** | input | int | 	# of parents / children aboard the Titanic |
 | **Ticket** | demographic information | object | Ticket number |
-| **Fare** | demographic information | float | Passenger fare |
+| **Fare** | input | float | Passenger fare |
 | **Cabin** | demographic information | object | Cabin number |
 | **Embarked** | demographic information | object | C = Cherbourg, Q = Queenstown, S = Southampton |
 
-* **Source of training data**: Kaggle, Titanic - Machine Learning from Disater
+* **Source of training data**: Kaggle, Titanic - Machine Learning from Disaster
 * **How training data was divided into training and validation data**: 70% training, 21% validation, 9% test
 * **Number of rows in training and validation data**:
   * Training data: 499 rows and 6 columns
@@ -42,7 +42,7 @@
   * Testing data: 65 rows and 6 columns
  
 * ### Test Data
-* **Source of test data**: Kaggle, Titanic - Machine Learning from Disater
+* **Source of test data**: Kaggle, Titanic - Machine Learning from Disaster
 * **Number of rows in test data**: 65 rows
 * **State any differences in columns between training and test data**: None
 
@@ -72,14 +72,7 @@ clf_ext = ExtraTreesClassifier(
 
 | Train AUC | Validation AUC | Test AUC |
 | ------ | ------- | -------- |
-| 0.871 | 0.870  | Need* |
-
-| Group | Validation AIR |
-|-------|-----|
-| #1 | 0.8345 |
-| #2 | 0.8765 |
-| #3 | 1.098 |
-| #4 | 1.245 |
+| 0.871 | 0.870  | 0.684 |
 
 | Feature | Importance |
 |----------|--------------|
@@ -90,7 +83,7 @@ clf_ext = ExtraTreesClassifier(
 | Parch	| 0.078774 |
 
 #### Correlation Heatmap
-![Correlation Heatmap](![image](https://github.com/user-attachments/assets/b50f3ba9-6f61-42ac-96ff-6efe3ce6d3d5)
+(![image](https://github.com/user-attachments/assets/b50f3ba9-6f61-42ac-96ff-6efe3ce6d3d5)
 
 
 
