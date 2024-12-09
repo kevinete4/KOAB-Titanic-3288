@@ -8,7 +8,7 @@
 * **Model date**: December 9, 2024
 * **Model version**: 1.0
 * **License**: MIT
-* **Model implementation code**: [titanic_3288.py] (https://github.com/kevinete4/KOAB-Titanic-3288/blob/main/titanic_3288.py)
+* **Model implementation code**: [titanic_3288.ipynb](https://github.com/kevinete4/KOAB-Titanic-3288/blob/main/titanic_3288.py)
 
 * ### Intended Use
 * **Primary intended uses**: This model is an *example* predictive model of the default classifier, with an *example* use case for determining the survivors of the Titanic Disaster
@@ -80,9 +80,6 @@ clf_ext = ExtraTreesClassifier(
 | #2 | 0.8765 |
 | #3 | 1.098 |
 | #4 | 1.245 |
-
-
-(*Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv)
 
 #### Correlation Heatmap
 ![Correlation Heatmap](![image](https://github.com/user-attachments/assets/b50f3ba9-6f61-42ac-96ff-6efe3ce6d3d5)
