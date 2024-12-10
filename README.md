@@ -37,18 +37,17 @@
 * **Source of training data**: Kaggle, Titanic - Machine Learning from Disaster
 * **How training data was divided into training and validation data**: 70% training, 21% validation, 9% test
 * **Number of rows in training and validation data**:
-  * Training data: 499 rows and 6 columns
-  * Validation data: 150 rows and 6 columns
-  * Testing data: 65 rows and 6 columns
+  * Training data: 623 rows and 6 columns
+  * Validation data: 187 rows and 6 columns
+  * Testing data: 81 rows and 6 columns
  
 * ### Test Data
 * **Source of test data**: Kaggle, Titanic - Machine Learning from Disaster
-* **Number of rows in test data**: 65 rows
+* **Number of rows in test data**: 418 rows
 * **State any differences in columns between training and test data**: None
 
 * ### Model details
-* **Columns used as inputs in the final model**: 'PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp',
-       'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'
+* **Columns used as inputs in the final model**: 'Pclass', 'Age', 'SibSp', 'Parch', 'Fare'
 * **Column(s) used as target(s) in the final model**: 'Survived'
 * **Type of model**: Extra Trees Classifier
 * **Software used to implement the model**: Python, scikit-learn
