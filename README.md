@@ -4,11 +4,11 @@
 
 ### Basic Information
 
-* **Person or organization developing model**: Kevin Etesham, `kevinetesham4@gwmail.gwu.edu`; Liv Gao, `livgao26@gwmail.gwu.edu`; Acadia Grenier, `acadiagrenier@gwmail.gwu.edu`; Ben Eber, `ben.eber@gwmail.gwu.edu`
+* **People developing model**: Kevin Etesham, `kevinetesham4@gwmail.gwu.edu`; Liv Gao, `livgao26@gwmail.gwu.edu`; Acadia Grenier, `acadiagrenier@gwmail.gwu.edu`; Ben Eber, `ben.eber@gwmail.gwu.edu`
 * **Model date**: December 9, 2024
 * **Model version**: 0.1.1
 * **License**: MIT
-* **Model implementation code**: [titanic_3288.ipynb](https://github.com/kevinete4/KOAB-Titanic-3288/blob/main/titanic_3288.py)
+* **Model implementation code**: [Titanic_3288.ipynb](https://github.com/kevinete4/KOAB-Titanic-3288/blob/main/Titanic_3288.ipynb)
 
 * ### Intended Use
 * **Primary intended uses**: This model is an *example* predictive model of the default classifier, with an *example* use case for determining the survivors of the Titanic Disaster
@@ -37,18 +37,17 @@
 * **Source of training data**: Kaggle, Titanic - Machine Learning from Disaster
 * **How training data was divided into training and validation data**: 70% training, 21% validation, 9% test
 * **Number of rows in training and validation data**:
-  * Training data: 499 rows and 6 columns
-  * Validation data: 150 rows and 6 columns
-  * Testing data: 65 rows and 6 columns
+  * Training data: 623 rows and 6 columns
+  * Validation data: 187 rows and 6 columns
+  * Testing data: 81 rows and 6 columns
  
 * ### Test Data
 * **Source of test data**: Kaggle, Titanic - Machine Learning from Disaster
-* **Number of rows in test data**: 65 rows
+* **Number of rows in test data**: 418 rows
 * **State any differences in columns between training and test data**: None
 
 * ### Model details
-* **Columns used as inputs in the final model**: 'PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp',
-       'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'
+* **Columns used as inputs in the final model**: 'Pclass', 'Age', 'SibSp', 'Parch', 'Fare'
 * **Column(s) used as target(s) in the final model**: 'Survived'
 * **Type of model**: Extra Trees Classifier
 * **Software used to implement the model**: Python, scikit-learn
@@ -68,11 +67,11 @@ clf_ext = ExtraTreesClassifier(
 ```
 ### Quantitative Analysis
 
-* Models were assessed primarily with AUC and AIR. See details below:
+* Models were assessed with AUC. See details below:
 
 | Train AUC | Validation AUC | Test AUC |
 | ------ | ------- | -------- |
-| 0.871 | 0.870  | 0.684 |
+| 0.871 | 0.870 | 0.6842 |
 
 | Feature | Importance |
 |----------|--------------|
@@ -83,11 +82,13 @@ clf_ext = ExtraTreesClassifier(
 | Parch	| 0.078774 |
 
 #### Correlation Heatmap
-(![image](https://github.com/user-attachments/assets/b50f3ba9-6f61-42ac-96ff-6efe3ce6d3d5)
+![image](https://github.com/user-attachments/assets/b50f3ba9-6f61-42ac-96ff-6efe3ce6d3d5)
 
 ### Ethical Considerations
-**Negtive Impacts**: While our model operates with 78.96% accuracy, this leaves roughly 21.04% of the passengers as having false predictions. Additionally, there is a possibility of overfitting the data to the training data which would result in poor performance against the testing data. In real world settings datasets are far larger and have far more inputs, this model should not be used as 21.04% can amount to thousands, if not millions of people that would be falsely classified.
-**Potential Uncertainties**: Uncertainties include the limited scope of the data. Since our data set is only 714 rows, we are left with a very limited scope. Additionally, smaller datasets generally aGiven the context of the challenge—to build a model that predicts who did/didn't survive the Titanic Disaster—the limited data make sense. That being said, in general, larger datasets allow for more robust analysis. Therefore using our model is only fit for smaller datasets.
+**Negative Impacts**: While our model operates with about a 68.42% accuracy on unseen data, this leaves roughly 31.58% of the passengers to have false predictions. Additionally, there is a possibility of overfitting the data to the training data which would result in poor performance against the testing data. If the model is used for purposes other than predicting Titanic survival rates, it could lead to inaccurate or harmful conclusions. 31.58% can amount to thousands, if not millions of people that would be falsely classified if used incorrectly. It's also important to note that an Extra Trees Classifier Model can intensify bias from biased training data. For example, the class distribution is fairly uneven and contains far more 3rd class tickets. Our model runs the risk of amplifying this bias on the testing data. 
+
+
+**Potential Uncertainties**: Uncertainties include the limited scope of the data and concerns with the "Age" feature. Since the data provided is considered small (<1000 rows), we are left with a limited scope. Additionally, smaller datasets are generally less robust. Therefore our model is only fit for this dataset, and not fit for real-world scenarios. Another concern with our model is the importance of the "Age" feature in predicting whether a passenger will survive. The "Age" feature also had NA values that require some imputation that may be inappropriate and cause misleading results. As for math and software uncertainties, there is a chance of inaccurate computation of evaluation testing (AUC and feature importance) from imported packages. 
 
 
 
