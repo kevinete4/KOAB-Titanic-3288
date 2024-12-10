@@ -8,7 +8,7 @@
 * **Model date**: December 9, 2024
 * **Model version**: 0.1.1
 * **License**: MIT
-* **Model implementation code**: [Titanic_3288.ipynb](https://github.com/kevinete4/KOAB-Titanic-3288/blob/main/titanic_3288.py)
+* **Model implementation code**: [Titanic_3288.ipynb]([https://github.com/kevinete4/KOAB-Titanic-3288/blob/main/titanic_3288.py](https://github.com/kevinete4/KOAB-Titanic-3288/blob/main/Titanic_3288.ipynb))
 
 * ### Intended Use
 * **Primary intended uses**: This model is an *example* predictive model of the default classifier, with an *example* use case for determining the survivors of the Titanic Disaster
