@@ -71,7 +71,7 @@ clf_ext = ExtraTreesClassifier(
 
 | Train AUC | Validation AUC | Test AUC |
 | ------ | ------- | -------- |
-| 0..862 | 0.885 | 0.69617 |
+| 0.862 | 0.885 | 0.69617 |
 
 | Feature | Importance |
 |----------|--------------|
