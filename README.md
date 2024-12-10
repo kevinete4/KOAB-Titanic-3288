@@ -85,8 +85,7 @@ clf_ext = ExtraTreesClassifier(
 ![image](https://github.com/user-attachments/assets/b50f3ba9-6f61-42ac-96ff-6efe3ce6d3d5)
 
 ### Ethical Considerations
-**Negtive Impacts**: While our model operates with 78.96% accuracy, this leaves roughly 21.04% of the passengers as having false predictions. Additionally, there is a possibility of overfitting the data to the training data which would result in poor performance against the testing data. In real world settings datasets are far larger and have far more inputs, this model should not be used as 21.04% can amount to thousands, if not millions of people that would be falsely classified.
-**Potential Uncertainties**: Uncertainties include the limited scope of the data. Since the data provided is only 714 rows, we are left with a very limited scope. Additionally, smaller datasets generally less robust. Given the context of the challenge—to build a model that predicts who did/didn't survive the Titanic Disaster—the limited data is justified. Therefore our model is only fit for smaller datasets, and not fit for real-world scenarios.
+**Negative Impacts**: A concern with our model is the importance of the "Age" feature in predicting whether a passenger will survive. The "Age" feature also had NA values that require some imputation that may be inappropriate and cause misleading results.
 
 
 
