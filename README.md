@@ -4,7 +4,7 @@
 
 ### Basic Information
 
-* **Person or organization developing model**: Kevin Etesham, `kevinetesham4@gwmail.gwu.edu`; Liv Gao, `livgao26@gwmail.gwu.edu`; Acadia Grenier, `acadiagrenier@gwmail.gwu.edu`; Ben Eber, `ben.eber@gwmail.gwu.edu`
+* **People developing model**: Kevin Etesham, `kevinetesham4@gwmail.gwu.edu`; Liv Gao, `livgao26@gwmail.gwu.edu`; Acadia Grenier, `acadiagrenier@gwmail.gwu.edu`; Ben Eber, `ben.eber@gwmail.gwu.edu`
 * **Model date**: December 9, 2024
 * **Model version**: 0.1.1
 * **License**: MIT
@@ -67,11 +67,11 @@ clf_ext = ExtraTreesClassifier(
 ```
 ### Quantitative Analysis
 
-* Models were assessed primarily with AUC and AIR. See details below:
+* Models were assessed with AUC. See details below:
 
 | Train AUC | Validation AUC | Test AUC |
 | ------ | ------- | -------- |
-| 0.871 | 0.870  | 0.684 |
+| 0.871 | 0.870 | 0.6842 |
 
 | Feature | Importance |
 |----------|--------------|
@@ -82,7 +82,7 @@ clf_ext = ExtraTreesClassifier(
 | Parch	| 0.078774 |
 
 #### Correlation Heatmap
-(![image](https://github.com/user-attachments/assets/b50f3ba9-6f61-42ac-96ff-6efe3ce6d3d5)
+![image](https://github.com/user-attachments/assets/b50f3ba9-6f61-42ac-96ff-6efe3ce6d3d5)
 
 ### Ethical Considerations
 **Negtive Impacts**: While our model operates with 78.96% accuracy, this leaves roughly 21.04% of the passengers as having false predictions. Additionally, there is a possibility of overfitting the data to the training data which would result in poor performance against the testing data. In real world settings datasets are far larger and have far more inputs, this model should not be used as 21.04% can amount to thousands, if not millions of people that would be falsely classified.
