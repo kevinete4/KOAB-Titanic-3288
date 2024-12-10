@@ -61,7 +61,7 @@ clf_ext = ExtraTreesClassifier(
     criterion='entropy',
     min_samples_leaf=3,
     min_samples_split=8,
-    n_estimators=20,
+    n_estimators=100,
     random_state=SEED
     )
 ```
@@ -71,24 +71,24 @@ clf_ext = ExtraTreesClassifier(
 
 | Train AUC | Validation AUC | Test AUC |
 | ------ | ------- | -------- |
-| 0.871 | 0.870 | 0.6842 |
+| 0..862 | 0.885 | 0.69617 |
 
 | Feature | Importance |
 |----------|--------------|
-| Age  | 0.402599 |
-|Pclass |	0.276537 |
-| Fare |	0.136289 |
-| SibSp |	0.105802 |
-| Parch	| 0.078774 |
+| Age  | 0.288290 |
+| Fare |	0.246599 |
+| Pclass |	0.238478 |
+| Parch |	0.127615 |
+| SibSp	| 0.099018 |
 
 #### Correlation Heatmap
 ![image](https://github.com/user-attachments/assets/b50f3ba9-6f61-42ac-96ff-6efe3ce6d3d5)
 
 ### Ethical Considerations
-**Negative Impacts**: While our model operates with about a 68.42% accuracy on unseen data, this leaves roughly 31.58% of the passengers to have false predictions. Additionally, there is a possibility of overfitting the data to the training data which would result in poor performance against the testing data. If the model is used for purposes other than predicting Titanic survival rates, it could lead to inaccurate or harmful conclusions. 31.58% can amount to thousands, if not millions of people that would be falsely classified if used incorrectly. It's also important to note that an Extra Trees Classifier Model can intensify bias from biased training data. For example, the class distribution is fairly uneven and contains far more 3rd class tickets. Our model runs the risk of amplifying this bias on the testing data. 
+**Negative Impacts**: While our model operates with about a 69.6% accuracy on unseen data, this leaves roughly 30.4% of the passengers to have false predictions. Additionally, there is a possibility of overfitting the data to the training data which would result in poor performance against the testing data. If the model is used for purposes other than predicting Titanic survival rates, it could lead to inaccurate or harmful conclusions. 30.4% can amount to thousands, if not millions of people that would be falsely classified if used incorrectly. It's also important to note that an Extra Trees Classifier Model can intensify bias from biased training data. For example, the class distribution is fairly uneven and contains far more 3rd class tickets. Our model runs the risk of amplifying this bias on the testing data. 
 
 
-**Potential Uncertainties**: Uncertainties include the limited scope of the data and concerns with the "Age" feature. Since the data provided is considered small (<1000 rows), we are left with a limited scope. Additionally, smaller datasets are generally less robust. Therefore our model is only fit for this dataset, and not fit for real-world scenarios. Another concern with our model is the importance of the "Age" feature in predicting whether a passenger will survive. The "Age" feature also had NA values that require some imputation that may be inappropriate and cause misleading results. As for math and software uncertainties, there is a chance of inaccurate computation of evaluation testing (AUC and feature importance) from imported packages. 
+**Potential Uncertainties**: Uncertainties include the limited scope of the data and concerns with the "Age" feature. Since the data provided is considered small (<1000 rows), we are left with a limited scope. Additionally, smaller datasets are generally less robust. Therefore our model is only fit for this dataset, and not fit for real-world scenarios. The "Age" feature also had NA values that require some imputation that may be inappropriate and cause misleading results. As for math and software uncertainties, there is a chance of inaccurate computation of evaluation testing (AUC and feature importance) from imported packages. 
 
 
 
